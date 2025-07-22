@@ -31,12 +31,12 @@ Create a simple `input.md` file with content like:
 ```markdown
 # My Title
 Some *italic* and **bold** text.
-```
+
 ## Subheading
 
 - Item 1
 - Item 2
-
+```
 ---
 
 ### 3. Run the Converter
