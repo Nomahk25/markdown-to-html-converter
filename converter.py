@@ -3,21 +3,21 @@ import os
 
 def md_to_html_line(line):
     line = line.strip()
-    # Headings
+   
     if line.startswith('### '):
         return '<h3>' + line[4:] + '</h3>'
     elif line.startswith('## '):
         return '<h2>' + line[3:] + '</h2>'
     elif line.startswith('# '):
         return '<h1>' + line[2:] + '</h1>'
-    # Bold ( **text** )
+    
     line = line.replace('**', '<b>').replace('**', '</b>')  # simplified
-    # Italics ( *text* )
+   
     line = line.replace('*', '<i>').replace('*', '</i>')    # simplified
-    # Lists ( - item )
+    
     if line.startswith('- '):
         return '<li>' + line[2:] + '</li>'
-    # Paragraph
+   
     if line:
         return '<p>' + line + '</p>'
     return ''
